@@ -1,0 +1,227 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #333;
+}
+
+h1{
+    color: white;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Menú de navegación */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Secciones */
+section {
+    padding: 40px 0;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+section#inicio {
+    text-align: center;
+    background-color: #00aaff;
+    color: white;
+    background-image: url('images/Inicio.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    padding: 100px 0;
+}
+
+section#quienes-somos {
+    background-color: #e1e1e1;
+}
+
+section#catalogo .productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+section#catalogo .producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+section#catalogo .producto img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+section#catalogo .producto h3 {
+    font-size: 1.2em;
+    color: #00aaff;
+}
+
+section#catalogo .producto p {
+    font-size: 1em;
+    color: #333;
+}
+
+section#catalogo .producto button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+section#registro form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section#registro form label,
+section#registro form input {
+    font-size: 1em;
+}
+
+section#registro form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+section#registro form button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Estilos Responsivos */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    section#catalogo .productos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section#catalogo .productos {
+        grid-template-columns: 1fr;
+    }
+
+    section#registro form {
+        width: 90%;
+    }
+}
+
+/* LOGIN GENERAL */
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container label {
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-container input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-container button {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #2980b9;
+}
+
+.login-container p {
+  margin-top: 15px;
+}
+
+.error-msg {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
